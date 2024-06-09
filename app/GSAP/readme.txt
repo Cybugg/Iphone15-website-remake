@@ -7,6 +7,7 @@ It includes the following
 4. GSAP Timeline
 5. GSAP Stagger
 6. GSAP Scroll Trigger
+7. GSAP Text
 
 
 
