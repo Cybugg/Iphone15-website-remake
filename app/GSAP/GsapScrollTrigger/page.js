@@ -14,8 +14,26 @@ const GSAPScrollTrigger = () => {
     const SCROLL_REf = useRef();
     useGSAP(
         ()=>{
-            
-        }
+            const BOXES = gsap.utils.toArray(SCROLL_REf.current.children);
+
+            BOXES.forEach((box) => gsap.to(box, {
+                            x:250 * (BOXES.indexOf(box) + 5),
+                            rotation:360,
+                            borderRadius:"100%", 
+                            scale:1.5,
+                            scrollTrigger:{
+                                trigger:box,
+                                start:'bottom bottom',
+                                end:"top 20%",
+                                scrub:true
+                            },
+                            ease:"power1.inOut"
+                        }
+                )
+            )
+
+            console.log(SCROLL_REf.current.children)
+        }, {scope:SCROLL_REf}
     )
 
 
@@ -77,12 +95,12 @@ strokeLinejoin='round'
 
 
 
-<div className='mt-20 w-full flex flex-col items-start justify-center '>
+<div className='mt-20 w-full flex flex-col items-start justify-center mb-96' ref={SCROLL_REf}>
 
    
-    <div className='scroll-box w-20 h-20 bg-pink-500 rounded-lg' id='scroll-pink' ref={SCROLL_REf}>
+    <div className='scroll-box w-20 h-20 bg-pink-500 rounded-lg' id='scroll-pink' >
     </div>
-    <div className='scroll-box w-20 h-20 bg-orange-500 rounded-lg' id='scroll-orange' ref={SCROLL_REf}>
+    <div className='scroll-box w-20 h-20 bg-orange-500 rounded-lg' id='scroll-orange' >
     </div>
 </div>
  
