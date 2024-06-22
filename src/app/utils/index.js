@@ -8,6 +8,10 @@ import replaySVG from "../../../public/static/assets/images/replay.svg"
 import playSVG from "../../../public/static/assets/images/play.svg"
 import pauseSVG from "../../../public/static/assets/images/pause.svg"
 
+import hero from "../../../public/static/assets/videos/hero.mp4"
+
+
+
 
 
 // Videos
