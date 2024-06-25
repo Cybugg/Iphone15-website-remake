@@ -8,21 +8,28 @@ import replaySVG from "../../../public/static/assets/images/replay.svg"
 import playSVG from "../../../public/static/assets/images/play.svg"
 import pauseSVG from "../../../public/static/assets/images/pause.svg"
 
-import hero from "../../../public/static/assets/videos/hero.mp4"
-
+const  hero = "/static/assets/videos/hero.mp4"
+const  smallmv = "/static/assets/videos/smallHero.mp4";
+const  highlightFirstmv = "/static/assets/videos/highlight-first.mp4";
+const  highlightSectmv = "/static/assets/videos/hightlight-third.mp4";
+const  highlightThirdmv = "/static/assets/videos/hightlight-sec.mp4";
+const  highlightFourthmv = "/static/assets/videos/hightlight-fourth.mp4";
+const  exploremv = "/static/assets/videos/explore.mp4";
+const  framemv = "/static/assets/videos/frame.mp4";
 
 
 
 
 // Videos
-export const heroVideo = "https://streamable.com/c6ldbl";
-export const smallHeroVideo = "https://streamable.com/5e9vg4";
-export const highlightFirstVideo = "https://streamable.com/d730zw";
-export const highlightSecondVideo = "https://streamable.com/1fx8aj";
-export const highlightThirdVideo = "https://streamable.com/sctmes";
-export const highlightFourthVideo = "https://streamable.com/qbtth4";
-export const exploreVideo = "https://streamable.com/3qh4s9";
-export const frameVideo = "https://streamable.com/irjmle";
+export const heroVideo = hero;
+export const smallHeroVideo = smallmv;
+export const highlightFirstVideo = highlightFirstmv;
+export const highlightSecondVideo = highlightSectmv;
+export const highlightThirdVideo = highlightThirdmv;
+export const highlightFourthVideo = highlightFourthmv;
+export const exploreVideo = exploremv;
+export const frameVideo = framemv;
+
 // Images
 export const heroImg = "static/assets/images/hero.jpeg";
 export const appleImg = appleSVG;
