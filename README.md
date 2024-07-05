@@ -83,7 +83,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `./LICENSE` for more information.
 
 ### Contact
 
