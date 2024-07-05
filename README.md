@@ -8,13 +8,6 @@
 <h3 align="center">iPhone 15 Pro Website Clone</h3></h3>
 
 
-
----
-
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
-
 ## 📝 Table of Contents
 
 - [About](#about)
