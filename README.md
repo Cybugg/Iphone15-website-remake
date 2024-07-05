@@ -30,9 +30,9 @@
 ## 🧐 About <a name = "about"></a>
 
 
-### iPhone 15 Website Clone
+### iPhone 15 Website Clone using NextJS
 
-This project is a clone of the official iPhone 15 website. It aims to replicate the design, layout, and functionality of the original site using modern web technologies. The purpose of this project is to practice and showcase web development skills, including HTML, CSS, JavaScript, REACT, GSAP, ThreeJS and responsive design techniques.
+This project is a clone of the official iPhone 15 website. It aims to replicate the design, layout, and functionality of the original site using modern web technologies. The purpose of this project is to practice and showcase web development skills, including HTML, CSS, JavaScript, MextJS, GSAP, ThreeJS and responsive design techniques.
 
 ### Features
 
@@ -48,7 +48,7 @@ This project is a clone of the official iPhone 15 website. It aims to replicate 
 - **CSS3**: For styling and layout, including Flexbox and Grid for responsive design.
 - **JavaScript**: For interactivity and dynamic content.
 - **TailwindCSS**: To help with responsive design and layout.
-- **NEXTJS**: A React framework for faster production.
+- **NextJS**: A React framework for faster production.
 - **ThreeJS**:To render 3D components on the website
 - **GSAP**:To make complex animations easier to accomplish faster on the website
 
