@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="" rel="noopener">
- <img width="700px" height="700px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbW4pfpVzLJ4GtHVOJq6xvHpStFmdBKP5mSQ&s" alt="Project Image"></a>
+ <img width="700px" height="700px" src="https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iPhone-15-pre-orders.jpg?quality=82&strip=all&w=1024" alt="Project Image"></a>
 </p>
 
 <h3 align="center">iPhone 15 Pro Website Clone</h3></h3>
