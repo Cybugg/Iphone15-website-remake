@@ -29,10 +29,6 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Sure, here's an example of an "About" section for your GitHub repository:
-
----
-
 
 ### iPhone 15 Website Clone
 
