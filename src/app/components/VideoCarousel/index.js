@@ -26,9 +26,21 @@ const VideoCarousel = () => {
   const [loadedData, setLoadedData] = useState([]);
   const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video;
 
+  useGSAP(
+    () => {
+      gsap.to("#slider",{
+        transform: `translateX(${-100 * videoId}%)`,
+        duration:2,
+        ease:"power2.inOut"
+
+      })
+    },[videoId, isPlaying]
+  )
+
+
+
   useGSAP(() => {
  
-
     // video animation to play the video when it is in the view
     gsap.to("#video", {
       scrollTrigger: {
@@ -186,6 +198,14 @@ const VideoCarousel = () => {
                   // }
                   onPlay={() =>
                     setVideo((pre) => ({ ...pre, isPlaying: true }))
+                  }
+                  onEnded={
+                    ()=> {
+                      i !== 3
+                        ? handleProcess("video-end", i)
+                        : handleProcess("video-last")
+ 
+                    }
                   }
                   
                 >
