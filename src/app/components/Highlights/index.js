@@ -32,7 +32,6 @@ function Highlights() {
             </p>
           </div>
           </div>
-        
         {/* Video carousel */}
         <VideoCarousel />
       </div>
