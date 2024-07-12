@@ -97,8 +97,6 @@ const VideoCarousel = () => {
           })
         }
         }
-
-    
       })
      // update the progress bar
      const animUpdate = () => {
@@ -107,7 +105,6 @@ const VideoCarousel = () => {
           hightlightsSlides[videoId].videoDuration
       );
     };
-
     if (isPlaying) {
       // ticker to update the progress bar
       gsap.ticker.add(animUpdate);
@@ -130,7 +127,7 @@ const VideoCarousel = () => {
     }
   }, [startPlay, videoId, isPlaying, loadedData]);
 
-  // vd id is the id for every video until id becomes number 3
+  // video id is the id for every video until id becomes number 3
   const handleProcess = (type, i) => {
     switch (type) {
       case "video-end":
@@ -165,8 +162,6 @@ const VideoCarousel = () => {
     )
      
     };
-
-
     useEffect(
       () => {
         handleLoadedMetaData()
