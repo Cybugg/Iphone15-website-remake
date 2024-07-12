@@ -48,7 +48,6 @@ function index() {
             Take a closer look
         </h1>
     </div>
-
     <div className='flex flex-col items-center items-cnter mt-5'>
         <div className='w-full h-[75vh] md:h-[90vh] overflow-hidden relative'>
             <ModelView
@@ -107,8 +106,6 @@ function index() {
             </div>
         </div>
     </div>
-
-
    </section>
   )
 }
