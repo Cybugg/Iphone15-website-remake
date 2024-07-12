@@ -18,7 +18,6 @@ function ModelView({ index,groupRef,gsapType,controlRef,setRotationState,item,si
 <Suspense fallback={<div>
   Loading ...
 </div>}>
-
 </Suspense>
   </View>
   )

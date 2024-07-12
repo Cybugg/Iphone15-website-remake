@@ -40,7 +40,6 @@ const VideoCarousel = () => {
 
 
   useGSAP(() => {
- 
     // video animation to play the video when it is in the view
     gsap.to("#video", {
       scrollTrigger: {
@@ -56,7 +55,6 @@ const VideoCarousel = () => {
       },
     });
   }, [isEnd, videoId]);
-
   // Controller Part
  useEffect(
   ()=>{

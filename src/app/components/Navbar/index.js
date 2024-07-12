@@ -16,7 +16,6 @@ function Navbar() {
           <Image src={searchImg} alt='search' width={18} height={18} />
           <Image src={bagImg} alt='bag' width={18} height={18} />
         </div>
-      
         </nav>
     </header>
   )
