@@ -1,6 +1,7 @@
 import { PerspectiveCamera, View } from '@react-three/drei'
 import React, { Suspense } from 'react'
-import { Lights } from '../../components/Light'
+import Lights  from '../../components/Light'
+import IPhone from './iphone';
 
 function ModelView({ index,groupRef,gsapType,controlRef,setRotationState,item,size}){
 
@@ -12,15 +13,16 @@ function ModelView({ index,groupRef,gsapType,controlRef,setRotationState,item,si
   >
 
 {/* Ambient Light */}
-<ambientLight intensity={0.3} />
+ <ambientLight intensity={0.3} /> 
 <PerspectiveCamera makeDefault position={[0,0,4]} />
 <Lights />
-<Suspense fallback={<div>
+<Suspense fallback={<html><div>
   Loading ...
-</div>}>
-</Suspense>
+</div></html>}>
+</Suspense> 
+<IPhone />
   </View>
   )
 }
 
-export default ModelView
+export default ModelView;
