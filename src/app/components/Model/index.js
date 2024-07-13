@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap' 
 import ModelView from './ModelView'
@@ -26,8 +26,16 @@ function index() {
     const large = useRef(new THREE.Group());
 
     // rotation
-    const [smallRotation, setsmallRotation] = useState(0);
+    const [smallRotation, setSmallRotation] = useState(0);
     const [largeRotation, setLargeRotation] = useState(0);
+    const [DOM_document, setDOM_document] = useState(<div></div>);
+
+
+    useEffect(
+        ()=>{
+            setDOM_document(document.getElementById("root"))
+        }, []
+    )
 
     useGSAP(
         () => {
@@ -55,7 +63,7 @@ function index() {
                 groupRef={small}
                 gsapType="view1"
                 controlRef={CameraControlSmall}
-                setRotationState={setsmallRotation}
+                setRotationState={setSmallRotation}
                 item={model}
                 size={size}
             />
@@ -69,8 +77,19 @@ function index() {
                 size={size}
             />
             <Canvas
-            className='w-full h-full fixed top-0 bottom-0 left-0 right-0 overflow-hidden '
-            eventSource={document && document.getElementById('root')}
+            className='w-full h-full'
+            shadows ={true}
+            gl={{antialias:true}}
+            dpr={[1,1,5]}
+            style={{
+                position: 'fixed',
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+                overflow: 'hidden'
+              }}
+            eventSource={DOM_document}
             >
                 <View.Port />
             </Canvas>
