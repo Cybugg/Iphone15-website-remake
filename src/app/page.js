@@ -4,8 +4,10 @@ import Highlights from "./components/Highlights"
 import Model from "./components/Model"
 import dynamic from "next/dynamic"
 
+const ModelScene = dynamic(()=> import("@/app/components/Model", {
+  ssr:false
+}))
 
-const ModelScene = dynamic(()=>import("@/app/components/Model/index.js"),{ssr:false})
 
 export default function Home (){
 

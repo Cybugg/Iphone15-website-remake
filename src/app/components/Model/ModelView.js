@@ -27,6 +27,7 @@ function ModelView({ index,groupRef,gsapType,controlRef,setRotationState,item,si
    ref={controlRef}
    enableZoom
    enablePan={false}
+   enableRotate
    rotateSpeed={0.4}
    target={new THREE.Vector3(0, 0 ,0)}
    onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
@@ -37,7 +38,7 @@ function ModelView({ index,groupRef,gsapType,controlRef,setRotationState,item,si
   Loading ...
 </div></Html>}>
 <IPhone
-  scale={index ===1 ? [15,15,15]:[17,17,17]}
+  scale={index ===1 ? [10,10,20]:[17,17,17]}
 />
 </Suspense> 
 </group>

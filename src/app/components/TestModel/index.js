@@ -2,7 +2,7 @@
 
 import { useGLTF } from '@react-three/drei'
 
-export default function Iphone(props) {
+export default function TestModel(props) {
   const { nodes, materials } = useGLTF('./models/scene.glb')
   return (
     <group {...props} dispose={null}>
