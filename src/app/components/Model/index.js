@@ -78,16 +78,16 @@ function index() {
             />
             <Canvas
             className='w-full h-full'
-            shadows ={true}
-            gl={{antialias:true}}
-            dpr={[1,1,5]}
+            
+            
             style={{
                 position: 'fixed',
                 top: 0,
                 bottom: 0,
                 left: 0,
                 right: 0,
-                overflow: 'hidden'
+                overflow: 'hidden',
+                zIndex:999
               }}
             eventSource={DOM_document}
             >

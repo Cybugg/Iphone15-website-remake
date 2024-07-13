@@ -11,6 +11,11 @@ function ModelView({ index,groupRef,gsapType,controlRef,setRotationState,item,si
   <View
   index={index}
   id={gsapType} 
+  style={
+    {
+      zIndex:999999999
+    }
+  }
   className={`border-2 border-red-500 h-full ${index ===2 ? "right-[-100%]" :"" }`}
   >
 {/* Ambient Light */}
