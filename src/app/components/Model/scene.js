@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import Iphone from "./iphone";
 import Lights from "../Light";
 import * as THREE from "three"
+import Loader from "../Loader";
 
 function Scene(props) {
   return (
@@ -21,11 +22,11 @@ function Scene(props) {
             className="w-full h-full"
           >
            
-        <ambientLight intensity={5} />
+        <ambientLight intensity={0.5} />
         <Lights />
         <PerspectiveCamera />
         <Suspense fallback={
-            <Html><div className="text-white text-center">Loading...</div></Html>
+            <Loader />
         }>
 
                  <Iphone 

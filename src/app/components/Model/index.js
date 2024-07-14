@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 const Scene = dynamic(() => import("@/app/components/Model/scene"), {ssr: false})
 
 import { models, sizes } from '@/app/constants'
+import { animateWithGsapTimeline } from '@/app/utils/animations'
 
 
 const Model = () => {
@@ -45,6 +46,24 @@ const Model = () => {
 
     // GSAP timeline
     const tl = gsap.timeline();
+    useEffect(() => {
+     if(size === "large"){
+      animateWithGsapTimeline(tl, small, smallRotation, "#iphones", {
+        transform: 'translateX(-100%)',
+        duration: 2
+      })
+     }
+
+     if(size ==='small') {
+      animateWithGsapTimeline(tl, large, largeRotation, "#iphones", {
+        transform: 'translateX(0)',
+        duration: 2
+      })
+      }
+
+    },[size])
+    
+
     useGSAP(() => {
         gsap.to('#heading', { y: 0, opacity: 1 })
       }, []);
@@ -60,7 +79,10 @@ const Model = () => {
           <div className="flex flex-col items-center mt-5">
            
              {/* The Scene */}
-             <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden flex items-center relative  justify-center relative">
+
+              {/* wrapper */}
+             <div className='overflow-hidden w-full h-[75vh] md:h-[90vh] '>
+       <div className="w-full h-full  relative translate-x-[-50%] flex items-center justify-center" id='iphones' >
       <div className="w-full  absolute top-0 bottom-0 right-0 left-0 ">
      <Scene
       index={1}
@@ -72,7 +94,7 @@ const Model = () => {
       size={size}
      />
       </div>
-      <div className="w-full absolute right-[-100%]">
+      <div className="w-full absolute right-[-100%] top-0 bottom-0">
      <Scene 
        index={2}
        groupRef={large}
@@ -84,6 +106,8 @@ const Model = () => {
      />
       </div>
             </div>
+             </div>
+      
   
             <div className="mx-auto w-full">
               <p className="text-sm font-light text-center mb-5">{model.title}</p>
