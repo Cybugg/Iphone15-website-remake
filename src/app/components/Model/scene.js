@@ -3,7 +3,7 @@
 import { Center, Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react";
-import TestModel from "../TestModel";
+import Iphone from "./iphone";
 import Lights from "../Light";
 import * as THREE from "three"
 
@@ -28,17 +28,22 @@ function Scene(props) {
             <Html><div className="text-white text-center">Loading...</div></Html>
         }>
 
-                 <TestModel scale={[15,15,15]} />
+                 <Iphone 
+                    scale={props.index ===1?
+                                 [30,30,30]:
+                               [34, 34, 34]}
+                    item={props.item}
+                    size={props.size} />
         </Suspense>
         <pointLight position={[25, 10,10]} intensity={100}/>
         <OrbitControls
         makeDefault
         enableZoom={false} 
         enablePan={false}
-        rotateSpeed={2}
+        rotateSpeed={1.5}
         target={new THREE.Vector3(0, 0 ,0)}
-       
-
+        ref={props.controlRef}
+        onEnd={() => props.setRotationState(props.controlRef.current.getAzimuthalAngle())}
         />
   </Canvas>
   )

@@ -5,11 +5,11 @@ import gsap from 'gsap'
 import ModelView from './ModelView'
 import { yellowImg } from '@/app/utils'
 import * as THREE from "three"
-import { Canvas } from '@react-three/fiber'
-import { View, Preload, OrbitControls, Html, Environment, PerspectiveCamera  } from '@react-three/drei'
+import dynamic from "next/dynamic";
+const Scene = dynamic(() => import("@/app/components/Model/scene"), {ssr: false})
+
 import { models, sizes } from '@/app/constants'
-import Iphone from './iphone'
-import Lights from '../Light'
+
 
 const Model = () => {
     const [size, setSize] = useState('small');
@@ -41,67 +41,48 @@ const Model = () => {
     const [largeRotation, setLargeRotation] = useState(0);
   
 
+    // Animations
+
+    // GSAP timeline
+    const tl = gsap.timeline();
+    useGSAP(() => {
+        gsap.to('#heading', { y: 0, opacity: 1 })
+      }, []);
+    
+
     return (
       <section className="common-padding" id='canvas'>
         <div className="screen-max-width">
-          <h1 id="heading" className="section-heading font-bold">
+          <h1 id="heading" className="section-heading font-bold text-white">
             Take a closer look.
           </h1>
   
           <div className="flex flex-col items-center mt-5">
-            <div className="w-full  bg-white md:h-[90vh] overflow-hidden relative">
-              <ModelView 
-                index={1}
-                groupRef={small}
-                gsapType="view1"
-                controlRef={cameraControlSmall}
-                setRotationState={setSmallRotation}
-                item={model}
-                size={size}
-              />  
-{/*   
-              <ModelView 
-                index={2}
-                groupRef={large}
-                gsapType="view2"
-                controlRef={cameraControlLarge}
-                setRotationState={setLargeRotation}
-                item={model}
-                size={size}
-              /> */}
-  
-              {/* <Canvas
-                className="w-full h-full"
-                style={{
-                  position: 'fixed',
-                  top: 0,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  overflow: 'hidden'
-                }}
-                eventSource={document.getElementById('root')}
-              >
-               00000000000000000000000000000000000000
-                <View.Port />
-              </Canvas> */}
-
-              <Canvas className='w-full bg-red-500 h-full'
-              style={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-                overflow: 'hidden',
-             
-              }}
-               eventSource={win}
-              >
-                <OrbitControls>
-                        <View.Port />
-                </OrbitControls>
-              </Canvas> 
+           
+             {/* The Scene */}
+             <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden flex items-center relative  justify-center relative">
+      <div className="w-full  absolute top-0 bottom-0 right-0 left-0 ">
+     <Scene
+      index={1}
+      groupRef={small}
+      gsapType="view1"
+      controlRef={cameraControlSmall}
+      setRotationState={setSmallRotation}
+      item={model}
+      size={size}
+     />
+      </div>
+      <div className="w-full absolute right-[-100%]">
+     <Scene 
+       index={2}
+       groupRef={large}
+       gsapType="view2"
+       controlRef={cameraControlLarge}
+       setRotationState={setLargeRotation}
+       item={model}
+       size={size}
+     />
+      </div>
             </div>
   
             <div className="mx-auto w-full">
