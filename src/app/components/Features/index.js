@@ -2,8 +2,11 @@
 import { explore1Img, explore2Img, exploreVideo } from '@/app/utils';
 import { animateWithGsap } from '@/app/utils/animations';
 import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import Image from 'next/image';
 import React, { useRef } from 'react'
+import { ScrollTrigger } from "gsap/all"
+gsap.registerPlugin(ScrollTrigger);
 
 function Features() {
         const videoRef = useRef();
@@ -14,8 +17,14 @@ function Features() {
                     y:0,
                     opacity:1 })
                 // The Video
-                animateWithGsap(
-                    ""
+                gsap.to(
+                    "#exploreVideo",{
+                        scrollTrigger:{
+                            trigger:"#exploreVideo",
+                             toggleActions: 'play pause reverse restart'
+                        },
+                        onComplete: () => videoRef.current.play()
+                    }
                 )
                 // The Images
                 animateWithGsap(".g_grow", {
@@ -45,7 +54,7 @@ function Features() {
 
                 <div className='flex-cenetr flex-col sm:px-10 '>
                     <div className='relative h-[50vh] w-full flex items-center'>
-                        <video playsInline muted className='w-full h-full object-cover object-center' ref={videoRef}  preload='none' autoPlay  >
+                        <video playsInline muted className='w-full h-full object-cover object-center' ref={videoRef}  preload='none' autoPlay id='exploreVideo'  >
                             <source src={exploreVideo} type='video/mp4'> 
                             </source>
                         </video>

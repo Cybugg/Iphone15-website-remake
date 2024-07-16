@@ -5,6 +5,7 @@ import Model from "./components/Model"
 import dynamic from "next/dynamic"
 import Features from "./components/Features"
 import Footer from "./components/Footer"
+import HowItWorks from "./components/HowItWorks"
 
 const ModelScene = dynamic(()=> import("@/app/components/Model", {
   ssr:false
@@ -21,6 +22,7 @@ export default function Home (){
     <Highlights />
     <ModelScene />
     <Features />
+    <HowItWorks />
     <Footer />
   </main>
   )
