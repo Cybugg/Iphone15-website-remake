@@ -4,6 +4,7 @@ import Highlights from "./components/Highlights"
 import Model from "./components/Model"
 import dynamic from "next/dynamic"
 import Features from "./components/Features"
+import Footer from "./components/Footer"
 
 const ModelScene = dynamic(()=> import("@/app/components/Model", {
   ssr:false
@@ -20,6 +21,7 @@ export default function Home (){
     <Highlights />
     <ModelScene />
     <Features />
+    <Footer />
   </main>
   )
 }

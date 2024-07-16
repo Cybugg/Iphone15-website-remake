@@ -31,7 +31,7 @@ export const exploreVideo = exploremv;
 export const frameVideo = framemv;
 
 // Images
-export const heroImg = "static/assets/images/hero.jpeg";
+export const heroImg = "/static/assets/images/hero.jpeg";
 export const appleImg = appleSVG;
 export const searchImg = searchSVG;
 export const bagImg = bagSVG;
@@ -41,11 +41,11 @@ export const replayImg = replaySVG;
 export const playImg = playSVG;
 export const pauseImg = pauseSVG;
 
-export const yellowImg = "static/assets/images/yellow.jpg";
-export const blueImg = "static/assets/images/blue.jpg";
-export const whiteImg = "static/assets/images/white.jpg";
-export const blackImg = "static/assets/images/black.jpg";
-export const explore1Img = "static/assets/images/explore1.jpg";
-export const explore2Img = "static/assets/images/explore2.jpg";
-export const chipImg = "static/assets/images/chip.jpeg";
-export const frameImg = "static/assets/images/frame.png";
+export const yellowImg = "/static/assets/images/yellow.jpg";
+export const blueImg = "/static/assets/images/blue.jpg";
+export const whiteImg = "/static/assets/images/white.jpg";
+export const blackImg = "/static/assets/images/black.jpg";
+export const explore1Img = "/static/assets/images/explore1.jpg";
+export const explore2Img = "/static/assets/images/explore2.jpg";
+export const chipImg = "/static/assets/images/chip.jpeg";
+export const frameImg = "/static/assets/images/frame.png";

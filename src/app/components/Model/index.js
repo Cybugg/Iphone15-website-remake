@@ -83,7 +83,7 @@ const Model = () => {
               {/* wrapper */}
              <div className='overflow-hidden w-full h-[75vh] md:h-[90vh] '>
        <div className="w-full h-full  relative translate-x-[-50%] flex items-center justify-center" id='iphones' >
-      <div className="w-full  absolute top-0 bottom-0 right-0 left-0 ">
+      <div className="w-full  absolute top-0 bottom-0 right-0 left-0 cursor-pointer">
      <Scene
       index={1}
       groupRef={small}
