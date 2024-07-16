@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Apple iPhone 15 Pro",
-  description: "This the remake of ",
+  description: "iPhone 15 Pro is the first iPhone to feature an aerospace‑grade titanium design, using the same alloy that spacecraft use for missions to Mars. ",
 };
 
 export default function RootLayout({ children }) {

@@ -5,20 +5,16 @@ import gsap from "gsap";
 import Image from "next/image";
 import VideoCarousel from "../VideoCarousel"; 
 import ScrollTrigger from "gsap/all";
+import { animateWithGsap } from "@/app/utils/animations";
 gsap.registerPlugin(ScrollTrigger)
 
 function Highlights() {
 
   useGSAP(
     ()=>{
-      gsap.to("#title",
-         {opacity:1,
-           y:0,
-         ScrollTrigger:{
-          trigger:"#title",
-          
-         }
-         },)
+      animateWithGsap("#title", {
+        y:0,
+        opacity:1 })
       gsap.to(".link", {opacity:1})
     },[]
   )

@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 const Scene = dynamic(() => import("@/app/components/Model/scene"), {ssr: false})
 
 import { models, sizes } from '@/app/constants'
-import { animateWithGsapTimeline } from '@/app/utils/animations'
+import { animateWithGsap, animateWithGsapTimeline } from '@/app/utils/animations'
 
 
 const Model = () => {
@@ -65,7 +65,9 @@ const Model = () => {
     
 
     useGSAP(() => {
-        gsap.to('#heading', { y: 0, opacity: 1 })
+      animateWithGsap("#heading", {
+        y:0,
+        opacity:1 })
       }, []);
     
 
