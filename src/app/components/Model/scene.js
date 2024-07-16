@@ -41,7 +41,7 @@ function Scene(props) {
         makeDefault
         enableZoom={false} 
         enablePan={false}
-        rotateSpeed={1.5}
+        rotateSpeed={0.5}
         target={new THREE.Vector3(0, 0 ,0)}
         ref={props.controlRef}
         onEnd={() => props.setRotationState(props.controlRef.current.getAzimuthalAngle())}
