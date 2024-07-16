@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 import Highlights from "./components/Highlights"
 import Model from "./components/Model"
 import dynamic from "next/dynamic"
+import Features from "./components/Features"
 
 const ModelScene = dynamic(()=> import("@/app/components/Model", {
   ssr:false
@@ -18,6 +19,7 @@ export default function Home (){
     <Hero />
     <Highlights />
     <ModelScene />
+    <Features />
   </main>
   )
 }
