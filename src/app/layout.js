@@ -4,8 +4,8 @@ import dynamic from "next/dynamic"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "iPhone 15 Pro",
-  description: "Official Apple website for Apple gadgets.",
+  title: "Apple iPhone 15 Pro",
+  description: "This the remake of ",
 };
 
 export default function RootLayout({ children }) {

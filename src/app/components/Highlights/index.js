@@ -4,12 +4,21 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import VideoCarousel from "../VideoCarousel"; 
+import ScrollTrigger from "gsap/all";
+gsap.registerPlugin(ScrollTrigger)
 
 function Highlights() {
 
   useGSAP(
     ()=>{
-      gsap.to("#title", {opacity:1})
+      gsap.to("#title",
+         {opacity:1,
+           y:0,
+         ScrollTrigger:{
+          trigger:"#title",
+          
+         }
+         },)
       gsap.to(".link", {opacity:1})
     },[]
   )
@@ -18,7 +27,7 @@ function Highlights() {
     <section id='highlights' className='w-screen overflow-hidden h-full common-padding bg-zinc'>
       <div className='screen-max-width'>
           <div className="mb-36 w-full md:flex items-end justify-between">
-            <h1 id="title" className='section-heading' >
+            <h1 id="title" className='section-heading transalte-y-56 opacity-0' >
                Get the highlights.
             </h1>
             <div className="flex flex-wrap items-end gap-5">
