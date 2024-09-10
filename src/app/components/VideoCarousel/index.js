@@ -55,6 +55,7 @@ const VideoCarousel = () => {
       },
     });
   }, [isEnd, videoId]);
+  
   // Controller Part
  useEffect(
   ()=>{
